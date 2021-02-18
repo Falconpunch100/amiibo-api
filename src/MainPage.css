@@ -1,0 +1,57 @@
+#amiiboCollection {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(150px, 1fr));
+    background-color: white;
+    border-radius: 50px;
+}
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.grid-item img {  
+    width: 50%;
+}
+
+
+header {
+    width: 100%;
+    text-align: center;
+}
+
+header img {
+    height: auto;
+    width: 50%;
+}
+
+@media only screen and (max-width: 600px) {
+    #amiiboCollection {
+        grid-template-columns: repeat(3, minmax(150px, 1fr));
+    }
+    .grid-item {
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    #amiiboCollection {
+        grid-template-columns: repeat(2, minmax(150px, 1fr));
+        border-radius: 25px;
+    }
+    
+    .grid-item {
+        padding: 10px;
+    }
+}
+
+.delete {
+    background-color: rgb(248, 71, 39);
+    color: white;
+    padding: 5px;
+    border: white 2px solid;
+    border-radius: 5px;
+    cursor: pointer;
+}
