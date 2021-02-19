@@ -52,6 +52,5 @@ export function removeDuplicates(amiiboArray) {
         })
     })
 
-    console.log(uniqueAmiibos)
     return uniqueAmiibos;
 }

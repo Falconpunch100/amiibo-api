@@ -6,7 +6,6 @@ async function handleSubmit(searchValue, type) {
       case "character":
         response = await fetch(url + "amiibo/?character=" + searchValue)
         data = await response.json()
-        console.log(data)
         if (!data.error) {
           setAmiiboData(data.amiibo)
         }
@@ -17,7 +16,6 @@ async function handleSubmit(searchValue, type) {
       case "gameseries":
         response = await fetch(url + "amiibo/?gameseries=" + searchValue)
         data = await response.json()
-        console.log(data)
         if (!data.error) {
           setAmiiboData(data.amiibo)
         }
@@ -28,7 +26,6 @@ async function handleSubmit(searchValue, type) {
       case "amiiboseries":
         response = await fetch(url + "amiibo/?amiiboSeries=" + searchValue)
         data = await response.json()
-        console.log(data)
         if (!data.error) {
           setAmiiboData(data.amiibo)
         }

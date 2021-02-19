@@ -1,7 +1,6 @@
 import { addAmiibo, removeAmiibo } from "./util/storage.js"
 
 function Amiibo({ amiibo, setAmiiboData, allAmiibos }) {
-    console.log(amiibo.name, amiibo.obtained)
     return (
         <div>
             <h1>{amiibo.character}</h1>
@@ -13,7 +12,6 @@ function Amiibo({ amiibo, setAmiiboData, allAmiibos }) {
             <label>Owned?</label>
             <label htmlFor="toggle"></label>
             <input type="checkbox" name="toggle" id="toggle" checked={amiibo.obtained} onChange={(e) => {
-                console.log(e.target.checked)
                 let copy = allAmiibos.slice()
                 let foundAmiibo = copy.find((oneAmiibo) => {
                     if (oneAmiibo.tail === amiibo.tail) {
@@ -30,7 +28,6 @@ function Amiibo({ amiibo, setAmiiboData, allAmiibos }) {
                 else {
                     removeAmiibo(foundAmiibo)
                 }
-                console.log(copy, foundAmiibo)
                 setAmiiboData(copy)
             }}/>
             </div>

@@ -43,6 +43,5 @@ function MainPage() {
         </>
     )
 }
-//Get array from LocalStorage and map over the array
 
 export default MainPage;
