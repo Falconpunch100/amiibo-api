@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import InputBar from './InputBar'
 import Amiibo from "./Amiibo"
 import { getObtainedAmiibos } from "./util/storage.js"

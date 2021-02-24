@@ -2,12 +2,14 @@ import './App.css';
 import {Route} from "react-router-dom"
 import AmiiboPage from "./AmiiboPage"
 import MainPage from "./MainPage.js"
+import Navbar from "./Navbar.js"
 
 function App() {
 
   return (
     <main className="App">
-      <Route path="/home">
+      <Navbar></Navbar>
+      <Route path="/" exact>
         <MainPage></MainPage>
       </Route>
       <Route path="/character">
